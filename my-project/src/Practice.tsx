@@ -1,20 +1,22 @@
-type Point = {x: number; y: number, item: number[]
+type Point = {x: number; y: number, item?: number[]
 };
-type T = keyof Point
+
 
 function Practice() {
-  const obj: Point = {
-    x: 23,
-    y: 34,
-    item: [1, 2, 4, 5, 5]
-  };
+  function myf<T, U extends keyof T>(age: T, add: U) {
+    return age[add];
+  }
 
-  const ops = obj.item.map(value => value);
+const par: Point = {x: 23, y: 34};
 
-  console.log(ops);
+console.log(myf(par, 'x'))
 
   return (
-    <div>Practice</div>
+    <>
+     <div className="container mx-auto">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam enim neque deserunt recusandae amet quam inventore officia dolores, minima aut!</p>
+     </div>
+    </>
   )
 }
 
