@@ -1,22 +1,17 @@
-type Point = {x: number; y: number, item?: number[]
-};
-
+interface Person {
+  fname: string;
+  age: number;
+}
 
 function Practice() {
-  function myf<T, U extends keyof T>(age: T, add: U) {
-    return age[add];
-  }
+  const obj: Person = {
+    fname: 'j',
+    age: 23
+  };
 
-const par: Point = {x: 23, y: 34};
-
-console.log(myf(par, 'x'))
-
+  console.log(obj["fname"]);
   return (
-    <>
-     <div className="container mx-auto">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam enim neque deserunt recusandae amet quam inventore officia dolores, minima aut!</p>
-     </div>
-    </>
+    <div>Practice</div>
   )
 }
 
