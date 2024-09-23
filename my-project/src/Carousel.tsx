@@ -1,4 +1,4 @@
-import { FC } from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -7,8 +7,9 @@ import naruto from './assets/image/naruto.jpg'
 
 import { Navigation, Pagination } from 'swiper/modules'; // Correct module import
 
-const Carousel: FC = () => (
-  <Swiper
+const Carousel = () => (
+  <div className='container mx-auto'>
+    <Swiper
     spaceBetween={50}
     slidesPerView={1}
     navigation
@@ -28,6 +29,7 @@ const Carousel: FC = () => (
       <img src={naruto} alt="Slide 4" className="w-full" />
     </SwiperSlide>
   </Swiper>
+  </div>
 );
 
 export default Carousel;

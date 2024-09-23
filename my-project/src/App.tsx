@@ -1,12 +1,12 @@
 
-import Practice from "./Practice"
+import Prop from "./Prop"
 
 
 
 function App() {
   return (
     <div>
-      <Practice />
+      <Prop />
     </div>
   )
 }

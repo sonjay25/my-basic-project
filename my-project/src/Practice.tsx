@@ -1,17 +1,15 @@
-interface Person {
-  fname: string;
-  age: number;
-}
-
+type P = (x: number) => number;
+type Q = {fname: string, age: number, item?: number[]};
 function Practice() {
-  const obj: Person = {
-    fname: 'j',
-    age: 23
-  };
-
-  console.log(obj["fname"]);
+  function myf(a: number[]) {
+    return a.filter(fil => fil >= 5).map(value => value * 2);
+  }
+  const t = [1, 3, 5, 5, 68];
+  console.log(myf(t))
   return (
-    <div>Practice</div>
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio earum ut facilis necessitatibus laborum, recusandae repellendus ab. Error, numquam aliquid.</p>
+   </div>
   )
 }
 
